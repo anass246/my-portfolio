@@ -1,65 +1,92 @@
-import Image from "next/image";
+import React from 'react';
+import { ExternalLink, Code2, Briefcase, Mail } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
+const Github = (LucideIcons as any).Github || (LucideIcons as any).GithubIcon || Code2;
+const Linkedin = (LucideIcons as any).Linkedin || (LucideIcons as any).LinkedinIcon || Briefcase;
+export default function Portfolio() {
+  const projects = [
+    {
+      title: "AI Video Platform",
+      description: "SaaS platform built with Next.js and Laravel for AI-driven video processing. Integrated FFmpeg for media handling.",
+      tech: ["Next.js", "Laravel", "PostgreSQL", "Tailwind"],
+      link: "https://github.com/anass246/ai-video-platform",
+    },
+    {
+      title: "E-commerce Frontend",
+      description: "Modern headless e-commerce built with TypeScript and Next.js, optimized for performance and SEO.",
+      tech: ["TypeScript", "Next.js", "Framer Motion"],
+      link: "https://github.com/anass246/myshop-frontend",
+    }
+  ];
 
-export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-[#0f172a] text-slate-200 selection:bg-cyan-500/30 font-sans">
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto pt-32 pb-20 px-6">
+        <div className="inline-block px-3 py-1 text-sm font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 mb-6">
+          Available for Remote Work
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+          Full-stack Developer
+        </h1>
+        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8 leading-relaxed">
+          Based in Casablanca. Building high-performance SaaS using <span className="text-cyan-400">Next.js</span> and <span className="text-blue-400">Laravel</span>. Entrepreneur & Martial Arts enthusiast.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          <a href="https://github.com/anass246" className="p-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors border border-slate-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4" />
+            </svg>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          <button className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-cyan-500/20">
+            Download CV
+          </button>
         </div>
-      </main>
+      </section>
+
+      {/* Projects Section */}
+      <section className="max-w-4xl mx-auto py-20 px-6">
+        <h2 className="flex items-center gap-2 text-2xl font-bold mb-12">
+          <Code2 className="text-cyan-400" /> Featured Projects
+        </h2>
+
+        <div className="grid gap-8">
+          {projects.map((project, index) => (
+            <div key={index} className="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all shadow-xl">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-bold group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink size={20} className="text-slate-500 hover:text-cyan-400 transition-colors" />
+                </a>
+              </div>
+              <p className="text-slate-400 mb-6">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((t, i) => (
+                  <span key={i} className="px-3 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="max-w-4xl mx-auto py-12 px-6 border-t border-slate-800 text-center text-slate-500 text-sm">
+        © 2026 Built with Next.js & Tailwind by Anass.
+      </footer>
     </div>
   );
 }
