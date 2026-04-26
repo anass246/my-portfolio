@@ -12,10 +12,10 @@ export default function Portfolio() {
       link: "https://github.com/anass246/ai-video-platform",
     },
     {
-      title: "E-commerce Frontend",
-      description: "Modern headless e-commerce built with TypeScript and Next.js, optimized for performance and SEO.",
-      tech: ["TypeScript", "Next.js", "Framer Motion"],
-      link: "https://github.com/anass246/myshop-frontend",
+      title: "Snack Anass - Full-stack Resto",
+      description: "A complete restaurant management system with real-time reservations, food ordering, and a dynamic Admin Dashboard.",
+      tech: ["Next.js", "Laravel", "PostgreSQL", "Tailwind CSS"],
+      link: "https://github.com/anass246/project.resto",
     }
   ];
 
